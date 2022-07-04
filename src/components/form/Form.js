@@ -3,11 +3,20 @@ import React from "react";
 const Form = () => {
   return (
     <>
-      <h1 data-testid="form-header" className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label_lg">
-          What needs to be done?
-        </label>
-      </h1>
+      <form action="">
+        <h1 data-testid="form-header" className="label-wrapper">
+          <label htmlFor="new-todo-input" className="label_lg">
+            What needs to be done?
+          </label>
+        </h1>
+
+        <input
+          data-testid="form-input"
+          type="text"
+          placeholder="What you want to do today"
+          autoComplete="off"
+        />
+      </form>
     </>
   );
 };

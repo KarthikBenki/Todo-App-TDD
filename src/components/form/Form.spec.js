@@ -10,4 +10,13 @@ describe("ToDo list entry form tests", () => {
       "What needs to be done?"
     );
   });
+
+  it("should render different attributes", () => {
+    const { getByTestId } = render(<Form />);
+
+    expect(getByTestId("form-input")).toHaveAttribute("type");
+    expect(getByTestId("form-input")).toHaveAttribute("placeholder");
+    expect(getByTestId("form-input")).toHaveAttribute("autoComplete");
+
+  });
 });

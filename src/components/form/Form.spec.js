@@ -15,15 +15,17 @@ describe("ToDo list entry form tests", () => {
     const { getByTestId } = render(<Form />);
 
     expect(getByTestId("form-input")).toHaveAttribute("type");
-    expect(getByTestId("form-input")).toHaveAttribute("placeholder");
+    expect(getByTestId("form-input")).toHaveAttribute("placeholder","What you want to do today");
     expect(getByTestId("form-input")).toHaveAttribute("autoComplete");
   });
 
-  it("should render Add text inside button",()=>{
+  it("should render Add text inside button", () => {
     const { getByTestId } = render(<Form />);
 
     expect(getByTestId("form-button")).toHaveTextContent("Add");
     expect(getByTestId("form-button")).toHaveAttribute("type");
     expect(getByTestId("form-button")).not.toHaveAttribute("disabled");
-  })
+  });
 });
+
+

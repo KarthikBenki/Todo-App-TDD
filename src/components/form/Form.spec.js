@@ -28,4 +28,18 @@ describe("ToDo list entry form tests", () => {
   });
 });
 
+describe("Functionality of from,text field and button", () => {
+    it('should render the new value on input change', () => {
+       const {getByTestId} = render(<Form />);
 
+       const textInput = getByTestId("form-input");
+
+       fireEvent.change(textInput,{target:{value:"Eat"}});
+
+       expect(getByTestId("form-input")).toHaveAttribute("value","Eat");
+
+       fireEvent.change(textInput,{target:{value:"Sleep"}});
+
+       expect(getByTestId("form-input")).toHaveAttribute("value","Sleep");
+    });
+});

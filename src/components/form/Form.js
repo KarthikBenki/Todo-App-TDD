@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Form = () => {
+    const [name,setName] = useState("");
+
+    const handleChange=(e)=>{
+        setName(e.target.value)
+    }
+
   return (
     <>
       <form action="">
@@ -15,6 +21,8 @@ const Form = () => {
           type="text"
           placeholder="What you want to do today"
           autoComplete="off"
+          value={name}
+          onChange={handleChange}
         />
 
         <button data-testid="form-button" type="submit">Add</button>

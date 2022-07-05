@@ -16,6 +16,8 @@ const Form = () => {
           placeholder="What you want to do today"
           autoComplete="off"
         />
+
+        <button data-testid="form-button" type="submit">Add</button>
       </form>
     </>
   );
